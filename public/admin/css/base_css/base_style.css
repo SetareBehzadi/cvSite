@@ -1,0 +1,20 @@
+/****style****/
+@font-face {
+    font-family: FDVazir;
+    src: url('/fonts/Vazir/Farsi-Digits/Vazir-FD.eot');
+    src: url('/fonts/Vazir/Farsi-Digits/Vazir-FD.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/Vazir/Farsi-Digits/Vazir-FD.woff2') format('woff2'),
+    url('/fonts/Vazir/Farsi-Digits/Vazir-FD.woff') format('woff'),
+    url('/fonts/Vazir/Farsi-Digits/Vazir-FD.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+
+body{
+    font-family:FDVazir;
+}
+
+.pagination > li > a, .pagination > li > span{
+    direction: ltr;
+}
