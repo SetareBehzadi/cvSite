@@ -1,6 +1,6 @@
 @extends('layout.app.index')
 @section('title')
-  Home
+  خانه
 @endsection
 
 @section('contents')

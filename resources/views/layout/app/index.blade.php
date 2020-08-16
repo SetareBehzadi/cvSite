@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="fa">
 <head>
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta charset="UTF-8">
@@ -7,8 +7,8 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="description" content="">
-    <meta name="keywords" content="Marco ,wedding-cart">
-    <meta name="author" content="Asarad">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
 
     <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
