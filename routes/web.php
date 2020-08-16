@@ -18,6 +18,9 @@ Auth::routes();
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout')->name('logout');
 Route::group(['prefix' => '/panel','namespace' => 'Admin','middleware' => 'admin'], function () {
 Route::get('/', 'AdminController@index')->name('home');
+Route::post('/update', 'AdminController@update')->name('home');
+Route::get('/password', 'AdminController@editPassword')->name('password');
+Route::post('/password', 'AdminController@updatePassword')->name('password');
 });
 
 Route::group(['namespace' => 'Front'], function () {
@@ -28,4 +31,6 @@ Route::group(['namespace' => 'Front'], function () {
 
 });
 
+/*________________________________________validation__________________________________________________*/
 
+Route::post('/validation/username', 'Ajax\validationController@validateUserName');

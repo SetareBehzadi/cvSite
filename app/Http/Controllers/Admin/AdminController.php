@@ -3,29 +3,39 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Repositories\Repository;
-use App\User;
+use App\Models\User;
+use App\Repositories\Contracts\UserRepositoryInterface;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class AdminController extends Controller
 {
 
-    protected $userModel;
+    protected $userObj;
 
-    public function __construct(User $user)
+    public function __construct(UserRepositoryInterface $repository)
     {
-        $this->userModel = new Repository($user);
+        $this->userObj =$repository;
     }
 
     public function index()
     {
         $userId = \App\Classes\Common\User::UserId();
-        $user = $this->userModel->find($userId);
+        $user = $this->userObj->find($userId);
         return view('admin.account.adminInfo',compact("user"));
     }
 
-    public function edit(Request $request)
+    public function update(Request $request)
     {
-        
+        $userId = \App\Classes\Common\User::UserId();
+        $data =$request->only($this->userObj->getModel()->fillable);
+//        'username', 'email', 'password','first_name','last_name','privilege','userImage'
+//        $data['username'] = $request['linkedin'];
+//        $data['email'] = $request['telegram'];
+//        $data['instagram'] = $request['instagram'];
+//        $data['facebook'] = $request['facebook'];
+        $user = $this->userObj->update($userId,$data);
+        return Redirect(route('home'))->with(Session::flash('flash_message', 'ویرایش کاربر با موفقیت انجام شد.'));
+
     }
 }

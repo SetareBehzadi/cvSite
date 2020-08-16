@@ -21,7 +21,7 @@
                     </div>
                     <div class="ibox-content">
 
-                        <form role="form" id="form" method="POST" action="/panel" enctype="multipart/form-data">
+                        <form role="form" id="form" method="POST" action="{{route('home')}}" enctype="multipart/form-data">
                             {{ csrf_field() }}
 
                             <div class="row">
@@ -42,7 +42,7 @@
                                     <div style="padding-bottom: 30px" class="form-group">
                                         <label class="col-sm-2 control-label text-left" for="first_name">نام </label>
                                         <div class="col-sm-10">
-                                            <input lang="fa" class="form-control" type="text" id="fName" name="fName"
+                                            <input lang="fa" class="form-control" type="text" id="first_name" name="first_name"
                                                    value="{{ $user['first_name'] }}">
                                         </div>
                                     </div>
@@ -50,7 +50,7 @@
                                     <div style="padding-bottom: 30px" class="form-group">
                                         <label class="col-sm-2 control-label text-left" for="last_name">نام خانوادگی</label>
                                         <div class="col-sm-10">
-                                            <input lang="fa" class="form-control" type="text" id="lName" name="lName"
+                                            <input lang="fa" class="form-control" type="text" id="last_name" name="last_name"
                                                    value="{{ $user['last_name'] }}">
                                         </div>
                                     </div>
@@ -125,7 +125,7 @@
                     username: {
                         required: true,
                         minlength: 3,
-                        remote: {
+                        /*remote: {
                             headers: {
                                 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                             },
@@ -146,12 +146,12 @@
                             dataType: 'json',
 
 
-                        }
+                        }*/
                     },
-                    fName: {
+                    first_name: {
                         required: true,
                     },
-                    lName: {
+                    last_name: {
                         required: true,
                     },
                     email: {
