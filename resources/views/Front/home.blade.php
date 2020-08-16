@@ -1,6 +1,6 @@
 @extends('layout.app.index')
 @section('title')
-    1taWeb|Home
+  Home
 @endsection
 
 @section('contents')
