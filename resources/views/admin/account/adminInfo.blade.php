@@ -96,7 +96,7 @@
                                         <input type="submit" value="ویرایش" class="btn btn-primary ">
                                     </div>
                                     <div class="form-group col-sm-offset-0" style=" height: 20px; display: inline;">
-                                        <a href="{{--{{route('change_password')}}--}}" class="btn btn-primary " >تغییر رمز عبور</a>
+                                        <a href="{{route('change_password')}}" class="btn btn-primary " >تغییر رمز عبور</a>
                                     </div>
                                 </div>
                             </div>

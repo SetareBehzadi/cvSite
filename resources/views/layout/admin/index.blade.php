@@ -59,15 +59,15 @@
 </div>
 
 
-<script src="admin/js/base_js/base_admin_js.js"></script>
-<script src="admin/js/plugin/metisMenu/jquery.metisMenu.js"></script>
-<script src="admin/js/plugin/validate/jquery.validate.min.js"></script>
-<script src="admin/js/plugin/slimscroll/jquery.slimscroll.min.js"></script>
-<script src="admin/js/main.js"></script>
+<script src="/admin/js/base_js/base_admin_js.js"></script>
+<script src="/admin/js/plugin/metisMenu/jquery.metisMenu.js"></script>
+<script src="/admin/js/plugin/validate/jquery.validate.min.js"></script>
+<script src="/admin/js/plugin/slimscroll/jquery.slimscroll.min.js"></script>
+<script src="/admin/js/main.js"></script>
 
 <!-- iCheck -->
-<script src="admin/js/plugin/iCheck/icheck.min.js"></script>
-<script src="admin/js/plugin/toastr/toastr.min.js"></script>
+<script src="/admin/js/plugin/iCheck/icheck.min.js"></script>
+<script src="/admin/js/plugin/toastr/toastr.min.js"></script>
 
 <script>
     $(document).ready(function(){

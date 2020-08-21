@@ -19,13 +19,11 @@ class EloquentBaseRepository implements RepositoryInterface
         return $this->model::create($item);
     }
 
-    public function update(int $ID, array $item)
+    public function update(int $ID, array $data)
     {
         $item = $this->find($ID);
         if ($item) {
-            \Log::info("item");
-            \Log::info($item);
-            return $item->update($item);
+            return $item->update($data);
         }
 
         return null;

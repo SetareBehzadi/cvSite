@@ -25,17 +25,24 @@ class AdminController extends Controller
         return view('admin.account.adminInfo',compact("user"));
     }
 
-    public function update(Request $request)
+    public function updateAcount(Request $request)
     {
         $userId = \App\Classes\Common\User::UserId();
-        $data =$request->only($this->userObj->getModel()->fillable);
-//        'username', 'email', 'password','first_name','last_name','privilege','userImage'
-//        $data['username'] = $request['linkedin'];
-//        $data['email'] = $request['telegram'];
-//        $data['instagram'] = $request['instagram'];
-//        $data['facebook'] = $request['facebook'];
+        $data =$request->only(['username','first_name','last_name','email']);
+
         $user = $this->userObj->update($userId,$data);
-        return Redirect(route('home'))->with(Session::flash('flash_message', 'ویرایش کاربر با موفقیت انجام شد.'));
+        return back()->with(Session::flash('flash_message', 'ویرایش کاربر با موفقیت انجام شد.'));
+
+    }
+
+    public function editPassword()
+    {
+        $user = \App\Classes\Common\User::UserId();
+        return view('admin.account.changePasswordPage', compact('user'));
+    }
+
+    public function updatePassword(Request $request)
+    {
 
     }
 }

@@ -18,8 +18,8 @@ Auth::routes();
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout')->name('logout');
 Route::group(['prefix' => '/panel','namespace' => 'Admin','middleware' => 'admin'], function () {
 Route::get('/', 'AdminController@index')->name('home');
-Route::post('/update', 'AdminController@update')->name('home');
-Route::get('/password', 'AdminController@editPassword')->name('password');
+Route::post('/update', 'AdminController@updateAcount')->name('home');
+Route::get('/password', 'AdminController@editPassword')->name('change_password');
 Route::post('/password', 'AdminController@updatePassword')->name('password');
 });
 
