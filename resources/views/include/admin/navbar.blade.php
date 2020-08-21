@@ -4,7 +4,7 @@
             <li class="nav-header">
                 <div class="dropdown profile-element"> <span>
 
-                           <div style="width:70px; height: 70px; background-size: cover; border-radius: 50px;{{(Auth::user()->userImage)?"background-image: url('/uploads/usersImage/".Auth::user()->userImage."');":"background-image: url('/img/admin/userImg.jpg');"}}; "></div>
+                           <div style="width:70px; height: 70px; background-size: cover; border-radius: 50px;{{(Auth::user()->userImage)?"background-image: url('/uploads/users/usersImage/".Auth::user()->userImage."');":"background-image: url('/img/admin/userImg.jpg');"}}; "></div>
 
                              </span>
                     <a data-toggle="dropdown" class="dropdown-toggle" href="#">

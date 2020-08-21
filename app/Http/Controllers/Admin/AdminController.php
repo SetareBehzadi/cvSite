@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Classes\Common\Image;
 use App\Http\Controllers\Controller;
 use App\Models\User;
 use App\Repositories\Contracts\UserRepositoryInterface;
@@ -31,6 +32,15 @@ class AdminController extends Controller
         $data =$request->only(['username','first_name','last_name','email']);
 
         $user = $this->userObj->update($userId,$data);
+
+        if ($request->hasFile('userImage')) {
+            if($request->file('userImage')->isValid()) {
+                $fileName = Image::uploadImage($request->file('userImage'), "/uploads/users/usersImage", $user['userImage']);
+
+                $this->userObj->update($userId,['userImage' => $fileName]);
+            }
+        }
+
         return back()->with(Session::flash('flash_message', 'ویرایش کاربر با موفقیت انجام شد.'));
 
     }
@@ -43,6 +53,9 @@ class AdminController extends Controller
 
     public function updatePassword(Request $request)
     {
+        $userId = \App\Classes\Common\User::UserId();
 
+        $user = $this->userObj->update($userId,['password' => bcrypt($request['newPassword'])]);
+        return back()->with(Session::flash('flash_message', 'ویرایش رمزعبور با موفقیت انجام شد.'));
     }
 }

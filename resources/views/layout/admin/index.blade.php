@@ -27,8 +27,8 @@
     <meta name="theme-color" content="#ffffff">
 
 
-     <link rel="stylesheet" href="admin/css/app/plugin/toastr/toastr.min.css">
-    <link rel="stylesheet" href="admin/css/base_css_admin/admin_base_css.css">
+     <link rel="stylesheet" href="/admin/css/app/plugin/toastr/toastr.min.css">
+    <link rel="stylesheet" href="/admin/css/base_css_admin/admin_base_css.css">
         <link rel="stylesheet" href="/admin/css/app/plugin/iCheck/custom.css">
     <style>
         .brand-image-preview{
