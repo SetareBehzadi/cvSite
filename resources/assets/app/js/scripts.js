@@ -54,9 +54,9 @@ $(function() {
     // progress bar
     wind.on('scroll', function () {
         $(".skills-progress span").each(function () {
-            var bottom_of_object = 
+            var bottom_of_object =
             $(this).offset().top + $(this).outerHeight();
-            var bottom_of_window = 
+            var bottom_of_window =
             $(window).scrollTop() + $(window).height();
             var myVal = $(this).attr('data-value');
             if(bottom_of_window > bottom_of_object) {
@@ -72,7 +72,7 @@ $(function() {
     // sections background image from data background
     var pageSection = $(".bg-img, section");
     pageSection.each(function(indx){
-        
+
         if ($(this).attr("data-background")){
             $(this).css("background-image", "url(" + $(this).data("background") + ")");
         }
@@ -86,7 +86,7 @@ $(function() {
         items:1,
         loop:true,
         margin: 15,
-        mouseDrag:false,
+        mouseDrag:true,
         autoplay:true,
         smartSpeed:500
     });
@@ -95,7 +95,7 @@ $(function() {
     $('.blog .owl-carousel').owlCarousel({
         loop:true,
         margin: 30,
-        mouseDrag:false,
+        mouseDrag:true,
         autoplay:true,
         smartSpeed:500,
         responsiveClass:true,
@@ -111,7 +111,26 @@ $(function() {
             }
         }
     });
-
+    // header carousel (home page first carousel)
+    $('.header .owl-carousel').owlCarousel({
+        loop:true,
+        margin: 30,
+        mouseDrag:true,
+        autoplay:true,
+        smartSpeed:500,
+        responsiveClass:true,
+        responsive:{
+            0:{
+                items:1
+            },
+            700:{
+                items:1
+            },
+            1000:{
+                items:1
+            }
+        }
+    });
 
     // magnificPopup
     $('.gallery').magnificPopup({

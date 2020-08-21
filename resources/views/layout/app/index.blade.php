@@ -56,11 +56,11 @@
 
 <!-- =====================================
 ==== Start Navbar -->
-<nav class="navbar navbar-expand-lg">
+<nav class="navbar navbar-expand-lg" style="background-color: #333;" dir="rtl">
     <div class="container">
 
         <!-- Logo -->
-        <a class="logo" href="#">Hadi</a>
+
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="icon-bar"><i class="fas fa-bars"></i></span>
@@ -70,67 +70,46 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link active" href="#" data-scroll-nav="0">Home</a>
+                    <a class="nav-link active" href="#" data-scroll-nav="0">خانه</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#" data-scroll-nav="1">About</a>
+                    <a class="nav-link" href="#" data-scroll-nav="1">درباره من</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#" data-scroll-nav="2">Services</a>
+                    <a class="nav-link" href="#" data-scroll-nav="2">آموزش ها</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="#" data-scroll-nav="5">Articles</a>
+                    <a class="nav-link" href="#" data-scroll-nav="5">مقالات</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#" data-scroll-nav="6">Contact</a>
+                    <a class="nav-link" href="#" data-scroll-nav="6">تماس با من</a>
                 </li>
             </ul>
         </div>
+
+        <a class="logo" id="logo" href="#">Hadi</a>
+
     </div>
 </nav>
 <!-- End Navbar ====
 ======================================= -->
 
-
-
-<!-- =====================================
-==== Start Header -->
-<header class="header valign bg-img" data-scroll-index="0" data-overlay-dark="5" data-background="app/img/bg.jpg" data-stellar-background-ratio="0.5">
-    <div class="container">
-        <div class="row">
-            <div class="vertical-center full-width text-center caption">
-                <h2>I Love To Design</h2>
-                <h1 class="cd-headline clip">
-                    <span class="blc">I Am </span>
-                    <span class="cd-words-wrapper">
-				              <b class="is-visible">Yekta Behzadi</b>
-				              <b>a Developer</b>
-				              <b>a Designer</b>
-				            </span>
-                </h1>
-            </div>
-        </div>
-    </div>
-
-    <div class="arrow">
-        <a href="#" data-scroll-nav="1">
-            <i class="fas fa-chevron-down"></i>
-        </a>
-    </div>
-</header>
-<!-- End Header ====
-======================================= -->
-
-@yield("header")
-
 @yield("contents")
 
 
 
+<footer class="footer " dir="rtl">
+    <div style="padding-bottom: 30px;">
+        <a href="" class="social-media-icon instagram"><i class="fab fa-instagram"></i></a>
+        <a href="" class="social-media-icon twitter"><i class="fab fa-twitter"></i></a>
+        <a href="" class="social-media-icon facebook"><i class="fab fa-facebook"></i></a>
+        <a href="" class="social-media-icon youtube"><i class="fab fa-youtube"></i></a>
+        <a href="" class="social-media-icon telegram"><i class="fab fa-telegram"></i></a>
+        <a href="" class="social-media-icon whatsapp"><i class="fab fa-whatsapp"></i></a>
+    </div>
 
-<footer class="footer">
-    <p>Copyright &copy; And Made With Love All Rights Reserved.</p>
+    <p>&copy; تمامی حقوق مادی و معنوی این وب سایت محفوظ می باشد. </p>
 </footer>
 
 <!-- jQuery -->
